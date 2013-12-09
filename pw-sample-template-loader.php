@@ -15,11 +15,11 @@ function pw_sample_shortcode() {
 
 	$templates = new PW_Template_Loader;
 
-	ob_start();
-	$templates->get_template_part( 'content', 'header' );
+	//ob_start();
+	echo $templates->get_template_part( 'content', 'header', false );
 	$templates->get_template_part( 'content', 'middle' );
 	$templates->get_template_part( 'content', 'footer' );
-	return ob_end_clean();
+	//return ob_end_clean();
 
 }
 add_shortcode( 'pw_sample', 'pw_sample_shortcode' );

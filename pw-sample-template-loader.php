@@ -8,7 +8,9 @@
 
 define( 'PW_SAMPLE_PLUGIN_DIR', plugin_dir_path( __FILE__ ) );
 
-require PW_SAMPLE_PLUGIN_DIR . 'class-gamajo-template-loader.php';
+if( ! class_exists( 'Gamajo_Template_Loader' ) ) {
+	require PW_SAMPLE_PLUGIN_DIR . 'class-gamajo-template-loader.php';
+}
 require PW_SAMPLE_PLUGIN_DIR . 'class-pw-template-loader.php';
 
 function pw_sample_shortcode() {
